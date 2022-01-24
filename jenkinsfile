@@ -1,0 +1,26 @@
+pipeline {
+     agent none
+      
+      stages{ 
+  
+           stage ("stage10") { 
+		     agent {
+			   label "flipkart"
+			   }
+		     steps{
+			 echo "this is stage1"
+		   }
+		   }
+           stage ("stage2") {
+		      agent{
+			  label "uber"
+			  }
+			  steps{
+			  echo "this is stage2"
+		   }
+		   }
+  
+  }
+  
+
+}
